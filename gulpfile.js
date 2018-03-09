@@ -79,7 +79,7 @@ gulp.task('build',
 
 // Build docs => Production-ready documents to upload (build_docs)
 gulp.task('build_docs',
-	gulp.series('docs_clean',  'docs_assets',
+	gulp.series('docs_clean',  'docs_assets', 'build',
 		gulp.parallel('docs_style', 'docs_scripts', 'docs_views'),
-		'build','zip', 'zip_docs','theme_clean')
+		'zip', 'zip_docs','theme_clean')
 );
