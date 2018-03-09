@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Elements | Evie by unDraw</title>
+	<%_ currentPage = "/elements" _%>
+	<% include ./partials/metadata %>
+	<link rel='stylesheet' href='<%= asset("css/style.min.css") %>' />
+</head>
+<body>
+	<% include ./partials/nav %>
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Elements</h1>
+						<p class="page__header__text">The building blocks that provide a uniform style as you add content. There are only a few custom classes to know about.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<div class="container">
+			<div class="page__inner">
+				<div class="page__menu">
+					<% page = "elements" %>
+					<% include ./partials/docs_menu %>
+				</div>
+				<div class="page__main">
+					<div class="container">
+						<div class="text-container text-container--center">
+							<h3>Colors</h3>
+							<p class="colors__description">These are the colors that compose the palette. Replace them directly on your CSS or as the variable value on the SASS files.</p>
+							<div class="colors">
+								<div class="colorbox">
+									<p class="colorbox__title">Primary</p>
+									<span class="colorbox__preview" style="background-color: #6C63FF;">#6C63FF</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Primary Dark</p>
+									<span class="colorbox__preview" style="background-color: #463aff;">#463aff</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Accent</p>
+									<span class="colorbox__preview" style="background-color: #06d19c;">#06d19c</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Secondary</p>
+									<span class="colorbox__preview" style="background-color: #4641FF;">#4641FF</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Text</p>
+									<span class="colorbox__preview" style="background-color: #666;">#666</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Headings</p>
+									<span class="colorbox__preview" style="background-color: #111;">#111</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Alternate background</p>
+									<span class="colorbox__preview colorbox__preview--text" style="background-color: #f7f7f7;">#f7f7f7</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Dark background</p>
+									<span class="colorbox__preview" style="background-color: #333C44;">#333C44</span>
+								</div>
+								<div class="colorbox">
+									<p class="colorbox__title">Lines</p>
+									<span class="colorbox__preview colorbox__preview--text" style="background-color: #eee;">#eee</span>
+								</div>
+							</div>
+							<h3>Typography</h3>
+							<p>Evie should be easily customizable and really fast, so only one font (<a href="https://fonts.google.com/specimen/Lato" target="_blank" class="link">Lato</a>) is imported and at a single weight (normal - 400).</p>
+							<p>To achieve some kind of vertical rythm and more eye-pleasing results the typography loosely follows the Minor Third scale. Here are the examples:</p>
+							<h1>This is a main heading</h1>
+							<h2>This is an h2 heading</h2>
+							<h3>This is a third heading</h3>
+							<h4>There is even a fourth heading</h4>
+							<p>Finally, there is the plain paragraph you can use as always.</p>
+							<h6>* You can use h6 like this for fine print.</h6>
+							<h3>Buttons</h3>
+							<p>To cover the most common cases, there are some buttons but you can easily create custom ones by changing only the color/border-color both on normal and hover state. Here are the buttons:</p>
+							<div class="row">
+								<button class="margin-right button--fixed">Plain</button> <a href="" class="button button--fixed">Link</a>
+							</div>
+							<div class="row">
+								<button class="button button__primary margin-right button--fixed">Primary</button> <button class="button button__primary button--fixed" disabled>Disabled</button>
+							</div>
+							<div class="row">
+								<button class="button button__accent margin-right button--fixed">Accent</button> <button class="button button__delete button--fixed">Delete</button>
+							</div>
+							<% include ./partials/code/buttons %>
+							<h3>Forms</h3>
+							<p>The form elements share the border radius and are designed to stand out in a white background. You can see those here:</p>
+							<form disabled>
+								<h4>Default input</h4>
+								<label for='full'>Label</label>
+								<input type='text' placeholder="Default, full-width field" id='full'>
+								<% include ./partials/code/input %>
+								<h4>Double inputs</h4>
+								<div class="double">
+									<div class="half">
+										<label for="first">First</label>
+										<input type="text" id="first" placeholder="Type...">
+									</div>
+									<div class="half">
+										<label for="second">Last</label>
+										<input type="text" id="second" placeholder="Type...">
+									</div>
+								</div>
+								<% include ./partials/code/input_half %>
+								<h4>Textarea</h4>
+								<label for='textarea'>Label</label>
+								<textarea placeholder="Plain text area" id='textarea'></textarea>
+								<% include ./partials/code/textarea %>
+								<h4>Select</h4>
+								<select>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+								</select>
+								<% include ./partials/code/select %>
+								<h4>Radio</h4>
+								<div class="double">
+									<p class="half">
+										<input name="radiovalue" type="radio" id="radio1" />
+										<label for="radio1">Radio option 1</label>
+									</p>
+									<p class="half">
+										<input name="radiovalue" type="radio" id="radio2" />
+										<label for="radio2">Radio option 2</label>
+									</p>
+								</div>
+								<% include ./partials/code/radio %>
+								<h4>Checkbox</h4>
+								<p class="row">
+									<input type="checkbox" id="check" />
+									<label for="check">This is a standard checkbox</label>
+								</p>
+								<% include ./partials/code/checkbox %>
+							</form>
+							<div class="docs__options">
+								<a href="/components" class="docs__prev">&#171; Previous: Components</a>
+								<a href="/utilities" class="docs__next">Next: Utilities &#187;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% include ./partials/footer %>
+<script src='<%= asset("js/app.min.js") %>'></script>
+<% include ./partials/analytics %>
+</body>
+</html>

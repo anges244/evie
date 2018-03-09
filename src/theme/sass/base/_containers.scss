@@ -1,0 +1,28 @@
+.container{
+	width: $containerWidth;
+	max-width: $containerMax;
+	margin: 0 auto;
+	position: relative;
+}
+
+.row{
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+
+.half{
+	width: 50%;
+	overflow: auto;
+    float:left;
+}
+
+.text-container{
+	max-width: $text-container;
+	
+	&--center{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

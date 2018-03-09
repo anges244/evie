@@ -1,0 +1,74 @@
+.app__header{
+	position:relative;
+	color: $hero-color;
+	box-shadow: $hero-shadow;
+	width: 100%;
+}
+
+.app__header__inner{
+	padding: #{$navbar-height * 1.1} 0 0 0;
+	position: relative;
+	z-index: 3;
+}
+
+.app__header__content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32pt 0;
+	overflow: auto;
+	
+	// This div allows normal behaviors for contained elements instead of flexbox aligning them 
+	&__inner{
+		width: 100%;
+		max-width: 66ch;
+		text-align: center;
+	}
+}
+
+/*--- CONTENT STYLING ---*/
+.app__header__title{
+	color: inherit;
+	margin-bottom: 1.25em;
+}
+
+.app__header__text{
+	opacity: 0.85;
+	line-height: 1.7;
+	text-align: left;
+}
+
+.app{
+	padding: calc( #{ $navbar-height + 16pt }) 0;
+}
+
+.app__inner{
+
+	@include desktop{
+		display: flex;
+	}
+}
+
+.app__menu{
+	width: 100%;
+	position: relative;
+
+	@include desktop{
+		display: block;
+		width: 300px;
+		flex-shrink: 0;
+	}
+}
+
+
+.app__main{
+	flex-grow: 1;
+}
+
+.app__main__title{
+	margin-top: 0.75em;
+}
+
+.app__image{
+	max-width:100%;
+}

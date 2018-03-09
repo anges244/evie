@@ -1,0 +1,27 @@
+@import "../../theme/sass/style";
+
+.navbar__logo sup{
+	font-size: 0.875rem;
+	margin-left: 2pt;
+	opacity: 0.85;
+}
+
+.hero__content__inner{
+	h6{
+		color: #cecece;
+		margin-top: 2.2em;
+		position: absolute;
+		bottom: 20px;
+		text-align: center;
+		width: 100%;
+		left: 0;
+		font-size: 0.7em;
+
+		a{
+			font-size: 1.1em;
+			color: #fafafa;
+		}
+	}
+}
+
+@import "./docs";

@@ -1,0 +1,85 @@
+html{
+	font-family: $font;
+	font-size: $font-size;
+	color: $text;
+	line-height: $line-height;
+	font-weight: $normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "liga" on;
+}
+
+p{
+	margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+	margin: 1.414em 0 0.5em;
+	line-height: 1.35;
+	color: $text-dark;
+	font-weight: $normal;
+}
+
+h5,h6 {
+	margin: 1.414em 0 0.5em;
+	line-height: 1.4;
+	color: $text;
+	font-weight: $normal;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2.074em;
+}
+
+h2{
+	font-size: 1.728em;
+}
+
+h3 {
+	font-size: 1.44em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+small,h6 {
+	font-size: 0.833em;
+  margin: 0.25em 0;
+}
+
+pre{
+  font-family: monospace, monospace;
+  font-size: 0.85rem;
+  color: $text-dark;
+  width: min-content;
+  background: $background-alt;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  padding: 8pt 16pt;
+  width: 100%;
+  //max-width: 85%; // Remove later
+  overflow: auto;
+  border: 1px solid $line;
+}
+
+a{
+  outline: 0;
+  text-decoration: none;
+  transition: 0.7s;
+  color: inherit;
+}
+
+.link{
+   color: $primary;
+  text-decoration: underline;
+
+  @include desktop{
+      &:hover{
+        color: $primary-dark;
+      }
+  }
+}

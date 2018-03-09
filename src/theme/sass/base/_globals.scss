@@ -1,0 +1,37 @@
+html{
+	box-sizing: border-box;
+	background-color: $background;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.invisible{
+	opacity: 0;
+	transition: 0.7s;
+}
+
+.fakefield{
+	display: none;
+}
+
+.left-align{
+	text-align: left;
+}
+
+.center, center-align{
+	text-align: center;
+}
+
+.right-align{
+	text-align: right;
+}
+
+.stress{
+	color: $text-dark;
+}
+
+img, svg{
+	max-width: 100%;
+}

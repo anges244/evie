@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Pages | Evie by unDraw</title>
+	<link rel='stylesheet' href='<%= asset("css/style.min.css") %>' />
+	<%_ currentPage = "/pages" _%>
+	<% include ./partials/metadata %>
+</head>
+<body>
+	<% include ./partials/nav %>
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Pages</h1>
+						<p class="page__header__text">The pages provide structure to your website. Some of them are opinionated but most of them just provide the blueprint to create whatever your project needs.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<div class="container">
+			<div class="page__inner">
+				<div class="page__menu">
+					<% page = "pages" %>
+					<% include ./partials/docs_menu %>
+				</div>
+				<div class="page__main">
+					<div class="container">
+						<div class="text-container text-container--center">
+							<h3>Landing</h3>
+							<p>The index page of this website, consists of multiple components and its purpose is to provide an overview to your website's features and purpose.</p>
+							<img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/evie/preview_landing2.png" style="border: 1px solid rgba(0,0,0,0.1);">
+							<h3>Multipurpose page</h3>
+							<p>This is mostly a simple layout, rather than a complete page. However, this is a really useful starting point for anything you want to create, like the documentation pages you are currently reading!</p>
+							<img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/evie/preview_page.png" style="border: 1px solid rgba(0,0,0,0.1);">
+							<h3>Authentication</h3>
+							<p>The classic sign up/in pages. You can easily change the image and make the form functional. We tried to minimize the distractions and therefore left the footer out.</p>
+							<img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/evie/preview_auth2.png" style="border: 1px solid rgba(0,0,0,0.1);">
+							<h3>Dashboard</h3>
+							<p>This is also a starting point layout, which suits modern web applications as a dashboard or anything you can think of.</p>
+							<img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/evie/preview_dashboard.png" style="border: 1px solid rgba(0,0,0,0.1);">
+							<div class="docs__options">
+								<a href="/docs" class="docs__prev">&#171; Previous: Overview</a>
+								<a href="/components" class="docs__next">Next: Components &#187;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% include ./partials/footer %>
+<script src='<%= asset("js/app.min.js") %>'></script>
+<% include ./partials/analytics %>
+</body>
+</html>

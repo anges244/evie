@@ -1,0 +1,136 @@
+.hero{
+	position: relative;
+	width: 100%;
+	background-image: url("../images/evie_default_bg.jpeg");
+	box-shadow: $hero-shadow;
+	background-size: cover; 
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: $hero-color;
+
+	&__inner{
+		position: relative;
+		z-index: 3;
+	}
+}
+
+// Hero overlays
+// It contains two divs between the image and the content
+// The one is the SVG mask and the second one a colored overlay with high opacity
+
+// Color overlay
+.hero__overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: $hero-color-opacity;
+	z-index: 1;
+	background-color: $primary;
+}
+
+.hero__overlay--gradient{
+	background: linear-gradient(to right, $primary, $secondary);
+}
+
+.hero__overlay--gradientVertical{
+	background: linear-gradient(to bottom, $primary, $secondary);
+}
+
+// Mask
+.hero__mask{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080"><defs><linearGradient id="06714b97-aec8-4b7e-bf3d-1e20f95f612e" y1="809.5" x2="958" y2="809.5" gradientTransform="matrix(1, 0, 0, -1, 0, 1082)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.05"/></linearGradient></defs><title>hero</title><rect id="0567095b-2cf7-4407-b8ab-ec2abe52d830" data-name="&lt;Path&gt;" y="545" width="1920" height="535" fill="#fff" opacity="0.05" style="isolation:isolate"/><polygon id="82ca9a61-a0a1-49cc-9805-a3533c693bad" data-name="&lt;Path&gt;" points="958 545 0 545 0 0 770.96 0 958 545" fill="url(#06714b97-aec8-4b7e-bf3d-1e20f95f612e)"/></svg>');
+	background-size: cover; 
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: $hero-mask-opacity;
+	z-index: 2;
+}
+
+// Actual content
+.hero__content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: calc( 100vh - 50px );
+	padding: calc( #{$navbar-height + 24pt}) 0; // Padding added to avoid overlapping with fixed navigation bars
+	overflow: auto;
+	
+	// This div allows normal behaviors for contained elements instead of flexbox aligning them 
+	&__inner{
+		width: 100%;
+		max-width: 600px;
+		text-align: center;
+	}
+}
+
+/*--- CONTENT STYLING ---*/
+.hero__title{
+	color: inherit;
+	margin-bottom: 1.25em;
+}
+
+.hero__text{
+	opacity: 0.85;
+	line-height: 1.7;
+	text-align: left;
+	font-size: 1.1em;
+}
+
+.hero .button{
+	margin: 12pt 8pt;
+}
+
+.hero__button{
+	color: $hero-color;
+	border-color: $hero-color;
+
+	@include desktop{
+		&:hover{
+			color: darken($hero-color,11%);
+			border-color: darken($hero-color,11%);
+		}
+	}
+}
+
+// Sub-hero
+.hero__sub{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+.hero__sub__down{
+	width: $hero-down-size;
+	height: $hero-down-size;
+	color: $text;
+	transition: 0.7s;
+	cursor: pointer;
+
+	@include desktop{
+		&:hover{
+			color: $primary;
+		}
+	}
+}
+
+#scrollToNext{
+	transition: 0.7s;
+}
+
+
+/*--- MODIFICATIONS ---*/
+
+// With the class "hero-full" the white line between the hero gets hidden and the hero expands
+.hero--full{
+	.hero__content{
+		min-height: 100vh;
+	}
+}
+
+.hero--full + .hero__sub{
+	display: none;
+}

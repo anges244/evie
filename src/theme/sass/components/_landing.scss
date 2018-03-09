@@ -1,0 +1,9 @@
+.landing__section{
+	padding: 24pt 0;
+}
+
+.landing__section:nth-child(odd){
+	background-color: $background-alt;
+	border-top: 1px solid $line;
+	border-bottom: 1px solid $line;
+}

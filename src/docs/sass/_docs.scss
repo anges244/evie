@@ -1,0 +1,68 @@
+.docs__text__title{
+	font-size: 1.1em;
+	color: $text-dark;
+}
+
+.docs__options{
+	display: flex;
+	margin: 2.3em 0;
+	justify-content: space-between;
+
+	a{
+		color: $primary;
+		border-bottom: 1px solid $primary;
+
+		@include desktop{
+			opacity: 0.85;
+
+			&:hover{
+				opacity: 1;
+				color: $primary-dark;
+				border-color: $primary-dark;
+			}
+		}
+	}
+}
+
+.page__main h3:first-child{
+	margin-top: 0.6em;
+}
+
+.colors{
+	display: flex;
+	width: 100%;
+	padding-bottom: 1.3em;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.colors__description{
+	margin-bottom: 0;
+}
+
+.colorbox{
+	width: 70%;
+	margin: 0 auto;
+
+	@include tablet{
+		width: 28%;
+	}
+}
+
+.colorbox__title{
+	margin-bottom: 0.25em;
+	font-size: 0.925em;
+}
+
+.colorbox__preview{
+	text-align: center;
+	padding: 7px 0;
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+	color: #fff;
+
+	&--text{
+		color: $text;
+	}
+}

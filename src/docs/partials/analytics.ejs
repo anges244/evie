@@ -1,0 +1,10 @@
+<% if (locals.site_analytics){ %>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= locals.site_analytics%>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<%= locals.site_analytics%>');
+</script>
+<% } %>

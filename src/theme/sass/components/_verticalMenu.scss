@@ -1,0 +1,91 @@
+/* Vertical menu */
+.vMenu{
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid $line;
+
+	@include desktop{
+		display: inline-block;
+		border-bottom: none;
+	}
+
+	li{
+		display: inline-block;
+		margin-bottom: 1em;
+		width: 48%;
+		padding-left: 16pt;
+
+		@include desktop{
+			padding-left: 0;
+			display: block;
+			width: auto;
+		}
+	}
+
+	a{
+		display: block;
+
+		@include desktop{
+			display: inline-block;
+			opacity: 0.85;
+
+			&:hover{
+				opacity: 1;
+				color: $primary;
+			}
+
+			&:after {
+				display: block;
+				content: '';
+				border-bottom: 1px solid $primary;  
+				transform: scaleX(0);  
+				transition: transform 250ms ease-in-out;
+			}
+
+			&:hover:after { transform: scaleX(1); }
+		}
+	}
+
+	& > ul{
+		margin-top: -0.65em;
+		padding-left: 1.5em;
+		margin-bottom: 0.75em;
+	}
+
+	& > ul li{
+		opacity: 0.85;
+		font-size: 0.95em;
+		margin-bottom: 0.25em;
+
+		&:before{
+			content: "-";
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.vMenu--active{
+	color: $primary;
+	
+	&:before{
+		content: "\2014";
+		margin-right: 0.333em;
+	}
+
+	@include desktop{
+		opacity: 1;
+		color: $primary;
+
+		&:after {
+			display: block;
+			content: '';
+			border-bottom: 1px solid $primary;  
+			transform: none;  
+			transition: none;
+		}
+	}
+}

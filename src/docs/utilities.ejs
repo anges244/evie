@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Utilities | Evie by unDraw</title>
+	<link rel='stylesheet' href='<%= asset("css/style.min.css") %>' />
+	<%_ currentPage = "/utilities" _%>
+	<% include ./partials/metadata %>
+</head>
+<body>
+	<% include ./partials/nav %>
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Utilities</h1>
+						<p class="page__header__text">We tried to provide a small number of basic and re-usable utility classes so you can add your content easier and better.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<div class="container">
+			<div class="page__inner">
+				<div class="page__menu">
+					<% page = "utilities" %>
+					<% include ./partials/docs_menu %>
+				</div>
+				<div class="page__main">
+					<div class="container">
+						<div class="text-container text-container--center">
+							<h3>Container</h3>
+							<p>The <span class="stress">"container"</span> class can be used wherever you want to center your content while creating white-space left and right. You should use it if you want more predictable and eye-resting designs, but skip it to create fluid layouts.</p>
+							<% include ./partials/code/container %>
+							<h3>Text container</h3>
+							<p>For readability reasons you should not leave text widths unrestricted. Add the class <span class="stress">"text-container"</span> to limit elements that contain texts to a reasonable size. To center align this block add also the <span class="stress">"text-container--center"</span> class.</p>
+							<% include ./partials/code/text_container %>
+							<h3>Links</h3>
+							<p>Anchors by default will inherit their color, so to make them stand out with your primary color, use the <span class="stress">"link"</span> class.</p>
+							<% include ./partials/code/link %>
+							<h3>Align left/center/right</h3>
+							<p>To align content within a block element, use directly these classes.</p>
+							<% include ./partials/code/align %>
+							<h3>Stressed text</h3>
+							<p>Since we are using a single font weight, to stress text within paragraph, we had to create a utility class. Example:</p>
+							<p>In this sentence <span class='stress'>this will be stressed</span> compared to the rest.</p>
+							<% include ./partials/code/stress %>
+							<div class="docs__options">
+								<a href="/elements" class="docs__prev">&#171; Previous: Elements</a>
+								<a href="/additional" class="docs__next">Next: Additional &#187;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% include ./partials/footer %>
+<script src='<%= asset("js/app.min.js") %>'></script>
+<% include ./partials/analytics %>
+</body>
+</html>

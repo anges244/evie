@@ -1,0 +1,98 @@
+.footer{
+	background-color: $background;
+	padding: 36pt 0;
+}
+
+.footer__inner{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	@include tablet{
+		flex-direction: row;
+	}
+}
+
+.footer__textLogo{
+	flex-shrink: 0;
+	padding-right: 16pt;
+	display: block;
+	cursor: pointer;
+	color: $primary;
+	font-size: 1.225rem;
+	min-width: 33%;
+	margin-bottom: 1.5rem;
+
+	@include tablet{
+		margin-bottom: 0;
+	}
+	
+	@include desktop{
+		min-width: 25%;
+		font-size: 1.325rem;
+	}
+}
+
+.footer__data{
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	padding-top: 0.25rem;
+	flex-wrap: wrap;
+	flex-direction: column;
+	font-size: 0.9rem;
+
+	@include desktop{
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+}
+
+.footer__data__item{
+	padding-bottom: 0.5rem;
+	display: inline-block;
+	margin-bottom: 8pt;
+}
+
+.footer__link{
+	color: $primary;
+	border-bottom: 1px dotted $primary;
+	padding-bottom: 1pt;
+	transition: 0.7s;
+
+	@include desktop{
+		&:hover{
+			color: #fafafa;
+			border-color: #fafafa;
+		}
+	}
+}
+
+.footer__row{
+	margin-bottom: 8pt;
+}
+
+/*--- Modifiers---*/
+.footer--dark{
+	background-color: $background-dark;
+
+	.footer__textLogo{
+		color: #fff;
+	}
+	
+	.footer__inner{
+		color: darken(#fff,15%);
+	}
+
+	.footer__link{
+		color: darken(#fff,15%);
+		border-color: darken(#fff,15%);
+
+		@include desktop{
+			&:hover{
+				color: #fff;
+				border-color: #fff;
+			}
+		}
+	}
+}

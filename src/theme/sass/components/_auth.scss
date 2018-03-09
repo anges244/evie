@@ -1,0 +1,52 @@
+.auth{
+	padding-top: $navbar-height + 32pt;
+}
+
+.auth__inner{
+	min-height: calc( 100vh - #{$navbar-height + 96pt}); // Triple so that the bottom is largely padded too...
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	@include desktop{
+		flex-direction: row;
+	}
+}
+
+.auth__media{
+
+	@include desktop{
+		width: 50%;
+		flex-shrink: 0;
+	}
+
+	img,svg{
+		max-height: 150px;
+		max-width: 90%;
+		@include noDragging;
+		@include noSelect;
+		
+		@include tablet{
+			max-height: 300px;
+		}
+
+		@include desktop{
+			max-height: 400px;
+		}
+	}
+}
+
+.auth__auth{
+	text-align: center;
+
+	@include desktop{
+		width: 50%;
+		flex-shrink: 0;
+	}
+}
+
+// Page title for auth must be h1 but with the sizing of h2
+.auth__title{
+	font-size: 1.728em;
+}

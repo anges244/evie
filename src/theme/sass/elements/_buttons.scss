@@ -1,0 +1,85 @@
+button, .button{
+	display: inline-block;
+	padding: 6pt 20pt;
+	line-height: $line-height;
+	border: 1px solid $primary;
+	color: $primary;
+	font-weight: $normal;
+	transition: 0.7s;
+	white-space: nowrap;
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: $radius;
+	margin-bottom: 1.3em;
+	transition: 0.7s;
+	text-align: center;
+	text-decoration: none;
+
+	&:hover,&:focus{
+		outline: 0;
+	}
+
+	@include desktop{
+		&:hover{
+			border-color: $primary-dark;
+			color: $primary-dark;
+		}
+	}
+}
+
+.button__primary{
+	background-color: $primary;
+	border-color: $primary;
+	color: #fff;
+
+	@include desktop{
+		&:hover{
+			background-color: $primary-dark;
+			border-color: $primary-dark;
+			color: #fff;
+		}
+	}
+}
+
+.button__accent{
+	background-color: $accent;
+	border-color: $accent;
+	color: #fff;
+
+	@include desktop{
+		&:hover{
+			background-color: darken($accent,4%);
+			border-color: darken($accent,4%);
+			color: #fff;
+		}
+	}
+}
+
+.button__delete{
+	background-color: $error;
+	border-color: $error;
+	color: #fff;
+
+	@include desktop{
+		&:hover{
+			background-color: darken($error,4%);
+			border-color: darken($error,4%);
+			color: #fff;
+		}
+	}
+}
+
+.button:disabled{
+	opacity: 0.25;
+	cursor: default;
+	pointer-events:none;
+}
+
+// Utility classes
+.button--fixed{
+	width: 160px;
+}
+
+.button--fixed2{
+	width: 220px;
+}

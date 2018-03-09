@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Additional | Evie by unDraw</title>
+	<%_ currentPage = "/additional" _%>
+	<% include ./partials/metadata %>
+	<link rel='stylesheet' href='<%= asset("css/style.min.css") %>' />
+</head>
+<body>
+	<% include ./partials/nav %>
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Additional</h1>
+						<p class="page__header__text">We really hope this will help you to execute your ideas faster and can't wait to see what you will create with Evie.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<div class="container">
+			<div class="page__inner">
+				<div class="page__menu">
+					<% page = "additional" %>
+					<% include ./partials/docs_menu %>
+				</div>
+				<div class="page__main">
+					<div class="container">
+						<div class="text-container text-container--center">
+							<h3>MIT License</h3>
+							<p>Copyright (c) 2018 <a href="https://twitter.com/anges244" target="_blank" class='link'>Aggelos Gesoulis</a> - <a href="https://twitter.com/ninalimpi" class="link" target="_blank">Katerina Limpitsouni</a></p>
+							<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+							<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+							<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+							<h3>Thanks</h3>
+							<p>At several parts of this theme we turned for solutions to people who have open-sourced their hard work and we want to thank them especially. To mention a few:</p>
+							<ul>
+								<li><p><a href="http://viljamis.com/" target="_blank" class="link">Viljami Salminen</a> for the responsive-navigation code.</p></li>
+								<li><p>The guys that created the <a href="http://materializecss.com/" target="_blank" class="link">Materialize</a> framework, whose work on forms was used on a few elements.</p></li>
+								<li><p><a href="https://github.com/jonathantneal" target="_blank" class="link">Jonathan Neal</a> for his Flexibility library that allows all of us to use flexbox without having to worry too much for old browsers.</p></li>
+								<li><p><a href="https://yaphi1.github.io/portfolio/" class="link" target="_blank">Yaphi Berhanu</a> for a really great article on how to make cross-browser parts of the scrolling JavaScript.</p></li>
+							</ul>
+							<h3>Browser support</h3>
+							<p>Evie uses flexbox but includes the superb <a href="https://github.com/jonathantneal/flexibility" class="link" target="_blank">Flexibility</a> library to make it work even on Internet Explorer 9+.</p>
+							<p>However, the targeted browsers are the last two versions of the major ones(Chrome, Firefox, Safari, Edge) and most modern mobile devices.</p>
+							<h3>Bugs / Fixes</h3>
+							<p>We would love to improve and perfect Evie and we are sure we've missed a few things. You can report them directly on <a href="https://github.com/anges244/evie/issues" target="_blank" class="link">GitHub</a> or on <a href="https://twitter.com/undraw_co" target="_blank" class="link">Twitter</a>.</p>
+							<h3>Contribute / Extend</h3>
+							<p>We are really excited to see what you will create with Evie and the ways you will choose to extend it. If you have created re-usable components that will be of value to others, please contact us or create a pull request on <a href="https://github.com/anges244/evie/issues" target="_blank" class="link">GitHub</a> and we can start collaborating on it.</p>
+							<h3>Story</h3>
+							<p>When Katerina had the idea for unDraw, we created really fast a set of style patterns, that would allow us to focus on more challenging aspects, like color transformations in real time.</p>
+							<p>This style actually managed to support the whole development of unDraw without slowing us down. So the thought was simple. To organize it a bit better and let it be useful for everyone.</p>
+							<p>We normally use the BEM methodology (a bit adjusted to our liking), but it would bloat and make the learning curve for Evie much steeper, so we tried to remove all such classes wherever we could and made sense.</p>
+							<p>This certainly is not a full-blown framework but we feel that it provides a great starting point for different websites and applications. We really can't wait to see what you can create with it!</p>
+							<div class="docs__options">
+								<a href="/utilities" class="docs__prev">&#171; Previous: Utilities</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% include ./partials/footer %>
+<script src='<%= asset("js/app.min.js") %>'></script>
+<% include ./partials/analytics %>
+</body>
+</html>

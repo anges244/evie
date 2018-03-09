@@ -1,0 +1,54 @@
+.steps{
+	text-align: center;
+	padding: 16pt 0;
+}
+
+.steps__inner{
+	@include desktop{
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+.step{
+	padding: 16pt 0;
+	text-align: center;
+	width: 100%;
+	border-top: 1px solid $line;
+	overflow: auto; 
+
+	&:first-child{
+		border-top: none;
+	}
+
+	@include desktop{
+		border-top: none;
+		width: auto;
+	}
+}
+
+.step__media{
+	margin: 16pt 0;
+
+	@include desktop{
+		margin: 32pt 0;
+	}
+}
+
+.step__image{
+	max-height: 100px;
+	max-width: 222px;
+	margin-top: 8pt;
+	@include noDragging;
+
+	@include tablet{
+		max-width:none;
+	}
+}
+
+.step__text{
+	max-width: 36ch;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
