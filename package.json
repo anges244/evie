@@ -38,7 +38,7 @@
     "del": "^3.0.0",
     "dotenv": "^5.0.1",
     "fancy-log": "^1.3.2",
-    "gulp": "git://github.com/gulpjs/gulp#4.0",
+    "gulp": "4.0",
     "gulp-concat": "^2.6.1",
     "gulp-ejs": "^3.1.2",
     "gulp-nodemon": "^2.2.1",
