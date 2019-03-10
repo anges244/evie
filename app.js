@@ -4,7 +4,7 @@ const path = require('path');
 const morgan = require('morgan');
 const docsRouter = require('./src/docs/router');
 // MODE CHANGER: Change this global to switch to docs mode
-global.docsMode = false;
+global.docsMode = true;
 
 // Convert assets location based on what type of gulp task we are running
 app.locals.asset = function(assetLocation, assetTheme){ return assetLocation; }

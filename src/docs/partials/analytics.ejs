@@ -6,5 +6,19 @@
   gtag('js', new Date());
 
   gtag('config', '<%= locals.site_analytics%>');
+
+  var trackOutboundLink = function(url,type, additional) {
+	  gtag('event', additional || 'Click', {
+	    'event_category': type || 'outbound',
+	    'event_label': url,
+	    'transport_type': 'beacon'
+	  });
+	};
+</script>
+<% } else { %>
+<script type="text/javascript">
+	var trackOutboundLink = function(url,type,additional) {
+		console.log('Click click...');
+	};
 </script>
 <% } %>

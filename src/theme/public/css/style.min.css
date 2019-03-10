@@ -830,7 +830,7 @@ select {
   max-height: 9999px; }
 
 .nav-toggle {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;

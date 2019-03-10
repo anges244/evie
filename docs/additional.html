@@ -10,12 +10,12 @@
 <meta property="og:title" content="Evie Theme by unDraw" />
 <meta property="og:url" content="https://evie.undraw.co/additional" />
 <meta property="og:description" content="An MIT licensed template bundled with a minimal style guide to build websites faster. Extemely lightweight, customizable and production-ready." />
-<meta property="og:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/evie_share.png" />
+<meta property="og:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/undraw__evie_meta.png" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Evie Theme by unDraw" />
 <meta name="twitter:description" content="An MIT licensed template bundled with a minimal style guide to build websites faster. Extemely lightweight, customizable and production-ready." />
-<meta name="twitter:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/evie_share.png" />
+<meta name="twitter:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/undraw__evie_meta.png" />
 <meta name="twitter:url" content="https://evie.undraw.co/additional" />
 <link rel="shortcut icon" href="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/favicon.ico">
 	<link rel='stylesheet' href='css/style.min.css' />
@@ -29,7 +29,7 @@
 			<nav class="navbar__menu">
 				<ul>
 					<li><a href="/docs">Documentation</a></li>
-					<li><a href="https://undraw.co" target="_blank">unDraw</a></li>
+					<li><a href="https://undraw.co" target="_blank" onclick="trackOutboundLink('http://undraw.co','Redirect','unDraw')">unDraw</a></li>
 				</ul>
 			</nav>
 			<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
@@ -115,9 +115,7 @@
 						</div>
 					</div>
 					<div class="footer__data__item">
-						<div class="footer__row">Created for <a href="https://undraw.co" target="_blank" class="footer__link">unDraw</a>
-						</div>
-						<div class="footer__row">Special thx to <a href="https://shareboost.co" target="_blank" class="footer__link">ShareBoost</a> for <a href="/auth/twitter" class="link__hidden">the</a> support
+						<div class="footer__row">Created for <a href="https://undraw.co" target="_blank" class="footer__link" onclick="trackOutboundLink('https://undraw.co','Redirect','unDraw')">unDraw</a>
 						</div>
 					</div>
 					<div class="footer__data__item">
@@ -146,6 +144,14 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-98726453-3');
+
+  var trackOutboundLink = function(url,type, additional) {
+	  gtag('event', additional || 'Click', {
+	    'event_category': type || 'outbound',
+	    'event_label': url,
+	    'transport_type': 'beacon'
+	  });
+	};
 </script>
 
 </body>
