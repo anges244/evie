@@ -62,3 +62,5 @@ typings/
 
 .DS_Store
 
+# Static build directory
+Evie
