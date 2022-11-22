@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.27.10",
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
     "dotenv": "^5.0.1",
